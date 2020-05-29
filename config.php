@@ -1,5 +1,4 @@
 <?php
-
 $host = "ec2-34-232-147-86.compute-1.amazonaws.com";
 $user = "ntvwxnohpujldg";
 $password = "7e7e88712cf85a9006835b3c113eee73628ff35e463ea7c96f4aee8b97def414";
