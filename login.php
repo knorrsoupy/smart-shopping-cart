@@ -31,7 +31,7 @@ try
                 if($count > 0)  
                 {  
                      $_SESSION["username"] = $_POST["username"];  
-                     header("location:login_success.php");  
+                     header("location:welcome.php");  
                 }  
                 else  
                 {  
