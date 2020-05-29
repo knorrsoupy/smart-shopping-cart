@@ -1,9 +1,12 @@
 <?php
 session_start();  
- $message = "";  
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  header("location: welcome.php");
+  exit;
+}  
 require_once "config.php";
-$username =;
-$username_err = ;
+$username = $password = "";
+$username_err = $password_err = "";
 try  
  {    
       if(isset($_POST["login"]))  
@@ -26,7 +29,7 @@ try
                 if($count > 0)  
                 {  
                      $_SESSION["username"] = $_POST["username"];  
-                     header("location:welcome.php");  
+                     header("location:login_success.php");  
                 }  
                 else  
                 {  
