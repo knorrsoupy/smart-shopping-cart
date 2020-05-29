@@ -71,7 +71,9 @@ try
                      <label>Password</label>  
                      <input type="password" name="password" class="form-control" />  
                      <br />  
-                     <input type="submit" name="login" class="btn btn-info" value="Login" />  
+                     <input type="submit" name="login" class="btn btn-info" value="Login" /> 
+		     <p>Don't have an account? <a href="index.php">Sign Up here</a>.</p>
+ 
                 </form>  
            </div>  
            <br />  
