@@ -1,12 +1,11 @@
 <?php
-define('DB_SERVER','localhost');
-define('DB_USER','id13048954_root');
-define('DB_PASS' ,'admin123');
-define('DB_NAME', 'items');
-$con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
-// Check connection
-if (mysqli_connect_errno())
-{
- echo "Failed to connect to MySQL: " . mysqli_connect_error();
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'demo');
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 ?>
