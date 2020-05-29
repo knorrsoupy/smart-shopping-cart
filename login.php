@@ -5,12 +5,6 @@ $user = "ntvwxnohpujldg";
 $password = "7e7e88712cf85a9006835b3c113eee73628ff35e463ea7c96f4aee8b97def414";
 $dbname = "dbhmbk8ogf0ogk";
 $port = "5432"; 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: welcome.php");
-  exit;
-}  
-
-require_once "config.php";
 $username = $password = "";
 $username_err = $password_err = "";
 $message="";
