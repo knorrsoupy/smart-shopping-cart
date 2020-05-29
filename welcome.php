@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["username"]))
+{
     header("location: login.php");
     exit;
 }
