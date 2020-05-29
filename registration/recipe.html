@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Items Selection</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    body {
+      font: 18px sans-serif;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <center>
+    <br>
+    <h1>Here's Something For Everyone!</h1><br><br>
+    <button type="button" class="btn btn-outline-primary" id="rs" value="cbm" onclick="getSelectValue()">Chicken Butter Masala</button>
+    <button type="button" class="btn btn-outline-primary" id="rs1" value="pbm" onclick="getSelectValue1()">Paneer Butter Masala</button>
+    <button type="button" class="btn btn-outline-primary" id="rs2" value="ct" onclick="getSelectValue2()">Chicken Tikka</button>
+    <br><br>
+    <div id="box"> </div>
+    <script>
+
+      function getSelectValue()
+      {
+        selected =document.getElementById("rs").value;
+
+        var q;
+    var s1_rows = [
+              {
+                Ingredient: "<center><b>Ingredient</b></center>",
+                Pos: "<center><b>Position</b></center>",
+                Price: "<center><b>Price</b></center>",
+                Quantity: "<center><b>Quantity</b></center>"
+            },
+
+            {
+            Ingredient: "Chicken",
+            Pos: "RA: S1",
+            Price: 150,
+            Quantity: "500 gms."
+           },
+        {
+            Ingredient: "Salt",
+            Pos: "RA: S2",
+            Price: 120,
+            Quantity: "1 tbsp."
+        },
+        {
+            Ingredient: "Red Chili Powder",
+            Pos: "RA: S3",
+            Price: 50,
+            Quantity: "1/2 tbsp."
+        },
+        {
+            Ingredient: "Garam Masala",
+            Pos: "RA: S4",
+            Price: 50,
+            Quantity: "1/2 tbsp."
+        },
+        {
+            Ingredient: "Yogurt",
+            Pos: "RA: S5",
+            Price: 100,
+            Quantity: "2 tbsp."
+        },
+        {
+            Ingredient: "Butter",
+            Pos: "RB: S1",
+            Price: 50,
+            Quantity: "2 gms."
+        },
+        {
+            Ingredient: "Cashew Nuts",
+            Pos: "RB: S2",
+            Price: 200,
+            Quantity: "20 nos."
+        }
+      ]
+
+        if (selected === "cbm")
+          q = s1_rows;
+
+        var html = "<table border='1|1'>";
+        for (var i = 0; i < q.length; i++) {
+          html += "<tr>";
+          html += "<td>" + q[i].Ingredient + "</td>";
+          html += "<td>" + q[i].Pos + "</td>";
+          html += "<td>" + q[i].Price + "</td>";
+          html += "<td>" + q[i].Quantity + "</td>";
+
+          html += "</tr>";
+        }
+        html += "</table>";
+        document.getElementById("box").innerHTML = html;
+      }
+	  function getSelectValue1()
+      {
+
+		selected =document.getElementById("rs1").value;
+
+        var q;
+
+      var s2_rows = [{
+        Ingredient: "<center><b>Ingredient</b></center>",
+        Pos: "<center><b>Position</b></center>",
+        Price: "<center><b>Price</b></center>",
+        Quantity: "<center><b>Quantity</b></center>"
+        },{
+          Ingredient: "Paneer",
+          Pos: "RB: S3",
+          Price: 150,
+          Quantity: "50 gms."
+        },
+        {
+          Ingredient: "Salt",
+          Pos: "RA: S2",
+          Price: 120,
+          Quantity: "1/4 tbsp."
+        },
+        {
+          Ingredient: "Red Chili Powder",
+          Pos: "RA: S3",
+          Price: 50,
+          Quantity: "1/2 tbsp."
+        },
+        {
+          Ingredient: "Garam Masala",
+          Pos: "RA: S4",
+          Price: 50,
+          Quantity: "1/2 tbsp."
+        },
+        {
+          Ingredient: "Yogurt",
+          Pos: "RA: S5",
+          Price: 100,
+          Quantity: "2 tbsp."
+        },
+        {
+          Ingredient: "Butter",
+          Pos: "RB: S1",
+          Price: 50,
+          Quantity: "2 gms."
+        },
+        {
+          Ingredient: "Cashew Nuts",
+          Pos: "RB: S2",
+          Price: 200,
+          Quantity: "15 nos."
+        }
+      ]
+        if (selected === "pbm")
+          q = s2_rows;
+
+        var html = "<table border='1|1'>";
+        for (var i = 0; i < q.length; i++) {
+          html += "<tr>";
+          html += "<td>" + q[i].Ingredient + "</td>";
+          html += "<td>" + q[i].Pos + "</td>";
+          html += "<td>" + q[i].Price + "</td>";
+          html += "<td>" + q[i].Quantity + "</td>";
+
+          html += "</tr>";
+        }
+        html += "</table>";
+        document.getElementById("box").innerHTML = html;
+      }
+	  function getSelectValue2()
+      {
+
+		selected =document.getElementById("rs2").value;
+        var q;
+    var s3_rows = [{
+      Ingredient: "<center><b>Ingredient</b></center>",
+      Pos: "<center><b>Position</b></center>",
+      Price: "<center><b>Price</b></center>",
+      Quantity: "<center><b>Quantity</b></center>"
+    },
+    {
+    Ingredient: "Chicken",
+    Pos: "RA: S1",
+    Price: 150,
+    Quantity: "500 gms."
+    },
+    {
+      Ingredient: "Salt",
+      Pos: "RA: S2",
+      Price: 120,
+      Quantity: "1/2 tbsp."
+    },
+    {
+      Ingredient: "Lemon Juice",
+      Pos: "RB: S3",
+      Price: 50,
+      Quantity: "2 tbsp."
+
+    },
+    {
+      Ingredient: "Garam Masala",
+      Pos: "RA: S4",
+      Price: 50,
+      Quantity: "1/2 tbsp."
+    },
+    {
+      Ingredient: "Yogurt",
+      Pos: "RA: S5",
+      Price: 100,
+      Quantity: "1 tbsp."
+    },
+    {
+      Ingredient: "Butter",
+      Pos: "RB: S1",
+      Price: 50,
+      Quantity: "2 gms"
+    },
+    {
+      Ingredient: "Heavy Cream",
+      Pos: "RB: S4",
+      Price: 60,
+      Quantity: "2 tbsp."
+    }
+  ];
+
+    if (selected === "ct")
+      q = s3_rows;
+
+    var html = "<table border='1|1'>";
+    for (var i = 0; i < q.length; i++) {
+      html += "<tr>";
+      html += "<td>" + q[i].Ingredient + "</td>";
+      html += "<td>" + q[i].Pos + "</td>";
+      html += "<td>" + q[i].Price + "</td>";
+      html += "<td>" + q[i].Quantity + "</td>";
+
+      html += "</tr>";
+    }
+    html += "</table>";
+    document.getElementById("box").innerHTML = html;
+  }
+  </script>
+
+    <br>
+    <button type="button" class="btn btn-dark" onclick="reloadPage();">Close</button>
+    <script>
+      function reloadPage() {
+        location.reload(true);
+      }
+    </script>
+
+    <a href="welcome.php" class="btn btn-danger">Back</a>
+    <br><br><br>
+    <img src="recipe-image.png" alt="recipe-image" height="130" width="200">
+    <br><br>
+    <blockquote class="blockquote text-center" style="font: 16px sans-serif;">
+      <p class="mb-0">One cannot think well, love well and sleep well if one has not dined well.</p>
+      <br>
+      <footer class="blockquote-footer">Virginia Woolf<cite title="Source Title"></cite></footer>
+    </blockquote>
+  </center>
+</body>
+
+</html>
