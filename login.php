@@ -4,10 +4,11 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   header("location: welcome.php");
   exit;
 }  
-$message="";
+
 require_once "config.php";
 $username = $password = "";
 $username_err = $password_err = "";
+$message="";
 try  
  {    
       if(isset($_POST["login"]))  
