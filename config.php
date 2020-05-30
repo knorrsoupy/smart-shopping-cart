@@ -1,8 +1,8 @@
 <?php
-define('DB_SERVER', 'fdb23.awardspace.net');
-define('DB_USERNAME', '3370068_qrcode');
-define('DB_PASSWORD', 'qwerty1234@');
-define('DB_NAME', '3370068_qrcode');
+define('DB_SERVER',' sql304.unaux.com');
+define('DB_USERNAME','unaux_25898807');
+define('DB_PASSWORD', 'qpmw4kn1l');
+define('DB_NAME', ' unaux_25898807_project');
 define('DB_PORT','3306');
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME,DB_PORT);
 
