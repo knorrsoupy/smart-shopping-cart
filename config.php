@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER',' sql304.unaux.com');
+define('DB_SERVER','185.27.134.10');
 define('DB_USERNAME','unaux_25898807');
 define('DB_PASSWORD', 'qpmw4kn1l');
 define('DB_NAME', ' unaux_25898807_project');
