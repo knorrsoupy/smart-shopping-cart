@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER','0.0.0.0');
+define('DB_SERVER',' http://155d563e7849.ngrok.io');
 define('DB_USERNAME','soup');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'project');
