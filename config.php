@@ -1,5 +1,5 @@
 <?php
-$host = "eec2-34-200-72-77.compute-1.amazonaws.com";
+$host = "ec2-34-200-72-77.compute-1.amazonaws.com";
 $user = "xlirvlyttavfzt";
 $password = "9e0f3404439664f156b9c7e87a8a1b7ed1e380511b0ab29de72172322166bbbb";
 $dbname = "d8ekmps2cf9i0o";
